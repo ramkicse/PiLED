@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Control Raspberry Pi LED</title>
+    </h:head>
+    <h:body>
+        <h1>Control Raspberry Pi LED</h1>
+        <br/>
+        <br />
+        <h:form>
+            <span class="color:red">Red</span> LED Light 
+            <p:inputSwitch value="#{ledToggle.redLed}">
+                <p:ajax listener="#{ledToggle.redSwitch()}" />
+            </p:inputSwitch><br/><br/>
+
+            <span class="color:green">Green</span> LED Light 
+            <p:inputSwitch value="#{ledToggle.greenLed}">
+                <p:ajax listener="#{ledToggle.greenSwitch()}" />
+            </p:inputSwitch>
+
+
+        </h:form>
+    </h:body>
+</html>
+
